@@ -1,0 +1,9 @@
+{
+  "name": "objectListener",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "latest",
+	"grunt-wrap": "latest",
+    "grunt-contrib-concat": "latest"
+  }
+}

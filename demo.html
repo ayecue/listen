@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript" src="build/objectListener.js"></script>
+<script type="text/javascript">
+	var testing = {
+		test : 'woot',
+		another : 'aye',
+		cool : 'meen',
+		foo : true,
+		bar : 2013
+	};
+
+	testing = listen(testing,'test',function(key,value){
+		console.log('set');
+		console.log(key);
+		console.log(value);
+	},function(key,value){
+		console.log('get');
+		console.log(key);
+		console.log(value);
+	});
+
+	testing.test = 'null';
+	testing.test = 'yet';
+	var test = testing.test;
+	
+	testing.another = 'yes';
+	
+	testing = listen(testing,'another',function(key,value){
+		console.log('set2');
+		console.log(key);
+		console.log(value);
+	},function(key,value){
+		console.log('get2');
+		console.log(key);
+		console.log(value);
+	});
+
+	testing.another = '++++';
+</script>
